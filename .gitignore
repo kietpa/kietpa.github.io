@@ -3,7 +3,7 @@
 /resources/_gen/
 .hugo_build.lock
 # Hugo Pipes
-/assets/jsconfig.json
+# /assets/jsconfig.json
 hugo_stats.json
 # Hugo executable may be added to repository
 hugo.exe
