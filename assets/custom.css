@@ -1,1 +1,29 @@
 /* Add custom CSS */
+/* :root,
+[data-theme="dark"] {
+    --color-primary: rgb(2, 137, 2);
+} */
+
+:root,
+[data-theme="dark"] {
+    --color-primary: rgb(46, 135, 230);
+}
+
+body {
+    font: normal 125%/1.4 "Lato", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+.logo {
+    color: black;
+}
+
+#front-button {
+    background-color: rgb(10, 194, 10);
+    border-color: rgb(10, 194, 10);
+
+    &:hover {
+        background: transparent;
+        color: rgb(10, 194, 10);
+    }
+}

@@ -1,14 +1,14 @@
 ---
-title: Jump-start your personal blog and portfolio with the Hugo Liftoff theme.
-subtitle: Minimal blog/portfolio theme with a focus on content creation and SEO best practices. An ideal choice for technical users jump-starting a personal brand.
+title: Hi, I'm Kiet Asmara 👋
+subtitle: A software engineer that specializes in backend web development. I run a blog where I keep track of what I learned.
 seo_title: Hugo Liftoff | Hugo theme for creators
 
-primary_cta_page: "about"
-secondary_cta_page: "projects"
+primary_cta_page: "projects"
+# secondary_cta_page: "projects"
 
 posts_section_heading: Recent Posts
 projects_section_heading: My Projects
 ---
 
-{{< recent-posts 5 >}}
+{{< recent-posts 3 >}}
 {{< projects 5 >}}
