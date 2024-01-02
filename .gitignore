@@ -1,20 +1,13 @@
-### Hugo ###
-# /public/
-# /resources/_gen/
+#others
+node_modules
 .hugo_build.lock
-# Hugo Pipes
-# /assets/jsconfig.json
-hugo_stats.json
-# Hugo executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
 
-### JS ###
-/node_modules
-
-### Netlify ###
-/netlify
-
-### System
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Hugo
+public
