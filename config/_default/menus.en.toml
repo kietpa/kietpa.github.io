@@ -11,6 +11,17 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 1
+
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 11
+
+
+[[main]]
   name = "Blog"
   pageRef = "posts"
   weight = 10
@@ -23,7 +34,7 @@
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/kiet-asmara"
   weight = 300
 
 

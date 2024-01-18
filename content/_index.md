@@ -3,7 +3,10 @@ title: "Kiet's blog"
 description: "This is a blog about technology."
 ---
 
-Hi, I'm <span class="text-2xl">**Kiet**</span> . A web developer that specializes in Golang, hoping to pursue a career as a back-end. This site is meant for me to dump and record my thoughts.
+This site is meant for me to document the things that I've learned. Mostly working with **Golang**.
+
+<div style="height:80px;"></div>
+
 
 
 <!-- <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">

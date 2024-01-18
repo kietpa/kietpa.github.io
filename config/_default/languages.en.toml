@@ -1,22 +1,22 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = ""
+title = "kietpa"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/kietpw2.png"
+  logo = "img/back.webp"
   # secondaryLogo = "PATH"
-  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  description = "A tech blog."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
   name = "Kiet Asmara"
   image = "img/profile.jpg"
-  headline = "An aspiring software engineer"
+  headline = "Software engineer"
   bio = "A tech blog."
   links = [
      { email = "mailto:kiet123pascal@gmail.com" },
@@ -28,7 +28,7 @@ title = ""
 #     { gitlab = "https://gitlab.com/username" },
 #     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },
-#     { instagram = "https://instagram.com/username" },
+     { instagram = "https://instagram.com/kietpascal" },
 #     { keybase = "https://keybase.io/username" },
 #     { kickstarter = "https://www.kickstarter.com/profile/username" },
 #     { lastfm = "https://lastfm.com/user/username" },
