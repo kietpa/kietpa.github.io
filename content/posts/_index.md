@@ -17,5 +17,5 @@ sharingLinks : false
 ---
 
 Articles that I write in my spare time.
-Check out [365 Days of Code](/blowfish/tags/365)
+Check out my posts on [Golang](/blowfish/tags/golang/)
 
