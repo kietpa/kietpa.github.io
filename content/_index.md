@@ -3,7 +3,7 @@ title: "Kiet's blog"
 description: "This is a blog about technology."
 ---
 
-This site is meant for me to document the things that I've learned. Mostly working with **Golang**.
+Hi 👋, I'm Kiet! This site is meant for me to document the things that I've learned. Mostly working with **Golang**.
 
 <div style="height:80px;"></div>
 
