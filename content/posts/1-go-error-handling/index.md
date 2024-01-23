@@ -59,7 +59,7 @@ So, daisy-chaining seemed a bit obsolete. If I really wanted to make it work, a 
 
 ## Custom Errors 
 
-The next error handling method I learned was custom errors. It's not exactly a method, but a *standard*. A separate file would be created to store these errors, also known as **error contracts** (or so I'm told). These contracts would then be used to replace common, easily handled errors without needing to parse the error any further as there is already a defined global variable.
+The next error handling method I learned was custom errors. It's not exactly a method, but a *standard*. A separate file would be created to store these errors, also known as **error contracts**. These contracts would then be used to replace common, easily handled errors without needing to parse the error any further as there is already a defined global variable.
 
 ```go
 import "errors"
@@ -73,7 +73,7 @@ var (
 )
 ...
 ```
-A basic implementation would include an array of custom errors created by `errors.New()`, which are then easily identfied using the `errors.Is()` and `errors.As()` functions. The errors are passed from the internals to the controllers handled in a specific way. For example, `ErrFailedBind` would indicate that the actual error needed to be parsed to display which of the input fields were invalid, whereas `ErrUnauthorized` would return the same message to the user everytime.
+A basic implementation would include an array of custom errors created by `errors.New()`, which are then easily identfied using the `errors.Is()` and `errors.As()` functions. The errors are passed from the internals to the controllers to be handled in a specific way. For example, `ErrFailedBind` would indicate that the actual error needed to be parsed to display which of the input fields were invalid, whereas `ErrUnauthorized` would return the same message to the user everytime. Below is an example of parsing the `ErrFailedBind`.
 
 ```go
 var Validate *validator.Validate = validator.New()
@@ -138,7 +138,7 @@ var (
 	}
 )
 ```
-These errors are used all over the handlers, where they are entered into an simple `ErrorMessage` function that logs and returns the error. One of my mentors provided this very simple template in Gin, which he used in his previous job.
+These errors are used all over the handlers, where they are entered into a simple `ErrorMessage` function that logs and returns the error. One of my mentors provided this very simple template in Gin, which he used in his previous job (in a large company).
 ```go
 import "github.com/gin-gonic/gin"
 
