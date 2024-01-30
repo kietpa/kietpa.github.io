@@ -8,8 +8,8 @@ title = "kietpa"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/back-logo3.png"
-  # secondaryLogo = "PATH"
+  logo = "img/back-logo5.png"
+  secondaryLogo = "img/back-logo5.png"
   description = "A tech blog."
   # copyright = "Copy, _right?_ :thinking_face:"
 
