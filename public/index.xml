@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kiet&#39;s blog on kietpa</title>
+    <link>https://kiet.blog/</link>
+    <description>Recent content in Kiet&#39;s blog on kietpa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Kiet Asmara</copyright>
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kiet.blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How do you even handle errors in Go?</title>
+      <link>https://kiet.blog/posts/custom-error-handling-in-go/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiet.blog/posts/custom-error-handling-in-go/</guid>
+      <description>Error handling is one of the things I&amp;rsquo;ve struggled with the most while learning Go. The issue lies in where and how to handle these errors. It&amp;rsquo;s mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it&amp;rsquo;s hard to decide which one is the &amp;lsquo;best practice&amp;rsquo;.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kiet.blog/posts/custom-error-handling-in-go/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://kiet.blog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiet.blog/about/</guid>
+      <description>Hi, I&amp;rsquo;m Kiet 👋 # I&amp;rsquo;m an aspiring software engineer who works in the back-end. I recently graduated from the Sepuluh Nopember Institute of Technology with a bachelor&amp;rsquo;s degree in Electrical-Engineering (EE).</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kiet.blog/about/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>
