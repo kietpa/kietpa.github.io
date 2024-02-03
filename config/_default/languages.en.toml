@@ -1,0 +1,28 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "kietpa"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/back-logo5.png"
+  # secondaryLogo = "PATH"
+  description = "A tech blog."
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+[author]
+  name = "Kiet Asmara"
+  image = "img/profile.jpg"
+  headline = "Software Engineer"
+  bio = "A tech blog."
+  links = [
+     { email = "mailto:kiet123pascal@gmail.com" },
+     { github = "https://github.com/kietpa" },
+     { instagram = "https://instagram.com/kietpascal" },
+     { linkedin = "https://linkedin.com/in/kiet-asmara" },
+  ]
+
+  
