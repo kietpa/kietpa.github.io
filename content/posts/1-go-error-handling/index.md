@@ -106,8 +106,8 @@ func msgForTag(tag string) string {
 	return ""
 }
 ```
-### A New Type
-In my experience, a more convenient way of implementing this in an API is to create a whole new type `APIError` that includes the HTTP status code along with the error message.
+### A New Error Type
+In my experience, a more convenient way of implementing this in an API is to create a whole new error type `APIError` that includes the HTTP status code along with the error message.
 
 ```go
 
@@ -178,16 +178,110 @@ A way to expand on the new error type is to implement the error interface by giv
 type error interface {
 	Error() string
 }
-
 ```
+
+In my [Hotel 626](https://github.com/kietpa/hotel-626) project, I used an error type that contains the generic http error and the actual application error, named service error (svcErr) and app error (appErr).
+
+```go
+type Error struct {
+	svcErr error // generic http error
+	appErr error // actual error
+}
+
+func NewError(svcErr, appErr error) error {
+	return Error{
+		svcErr: svcErr,
+		appErr: appErr,
+	}
+}
+
+// to be included in the error interface
+func (e Error) Error() string {
+	return errors.Join(e.svcErr, e.appErr).Error()
+}
+```
+
+In the service layer, the two errors would be wrapped in the Error struct using the `NewError` function and sent to the handlers above to be parsed. The new error is accepted as a normal error type which makes this convenient.
+
+```go
+type APIError struct {
+	Status  int
+	Message string
+}
+
+func FromError(err error) APIError {
+	var svcError Error
+	var apiError APIError
+
+	// errors as checks if both are type utils.Error
+	if errors.As(err, &svcError) {
+		// set actual error on message
+		apiError.Message = svcError.AppError().Error()
+
+		// check error
+		svcErr := svcError.ServiceError()
+		switch svcErr {
+		case ErrFailedBind:
+			apiError.Message = ErrorBind(svcError.AppError()) // check which field fails validation
+			apiError.Status = http.StatusBadRequest
+		case ErrBadRequest:
+			apiError.Status = http.StatusBadRequest
+		case ErrInternalFailure:
+			apiError.Status = http.StatusInternalServerError
+		case ErrNotFound:
+			apiError.Status = http.StatusNotFound
+		case ErrUnauthorized:
+			apiError.Status = http.StatusUnauthorized
+		}
+	}
+
+	return apiError
+}
+```
+
+In the handlers, the error is parsed by the `FromError` function which is at the core of this pattern. This function checks whether the received error contains the appErr and SvcErr field using `errors.As`. If it does, the error wil by casted to the `APIError` struct that displays the status code and message for the user. This message will be unique for certain errors such as `ErrFailedBind` which shows which input field is invalid. For other errors, the message will be kept uniform to prevent unwanted information leaks.
+
+In cases where the error check fails (usually in a panic), the error is immediately caught by a middleware. In the project I used the one provided by *Echo* with a basic logger. See the full [utils package](https://github.com/kietpa/hotel-626/tree/main/utils) for more details.
+
+```go
+// located in main
+e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
+	StackSize:    1 << 10, // 1 KB
+	LogErrorFunc: utils.LogError,
+}))
+
+// in the utils package
+func LogError(c echo.Context, err error, stack []byte) error {
+	log.Println(err)
+	return echo.NewHTTPError(http.StatusInternalServerError, err)
+}
+```
+
+This method of error handling is the one that feels the most comfortable to me, because new errors and methods can be easily added to the error contracts and the switch in the `FromError` function. 
+
+However, there is a flaw in the fact that all these errors are located in the utils package/folder and every part of application that uses them are dependant on them, creating tight coupling between packages.
 
 ## The Coupling Problem
 
+In software engineering, [coupling](https://en.wikipedia.org/wiki/Coupling_(computer_programming)) or dependency is the degree to which each program module relies on each one of the other modules. This means when a system A is tightly coupled with B, if A changes, B must also change. Tight coupling is usually an unwanted quality to have in an API, as APIs wants its components to be flexible, reusable, and adaptable. 
 
-## The Ideal
+The error package I described might not be suited for that since it uses **type-assertion** where the type of the error is checked. This means that the error types/contracts must be public, which creates a strong coupling with the caller, making for a brittle API. It also violates the **Open-closed principle** from the SOLID principles. [This blog post](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully) by Dave Cheney explains these issues much better than I can.
 
-[This blog post](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully) explains the issues
+So what's the solution? Well, in the same post Cheney said that we should check errors by **behaviour** instead of type. In this case, the error package only needs to be in the top layer with the handlers. He provides some methods to do this, but I personally have never seen this being done in an actual application. It just seems to hard to implement in some cases.
 
-## The Real
+The closest thing I've seen is not including the full error package in the service. In each service or domain, only the needed error contracts exist. For example, `ErrUnauthorized` only exists in the user domain.
+
+So, should we check by behaviour or type? The answer probably lies in between. Use type when behaviour doesn't work. Though, I've never really seen this strongly applied anywhere. I might be not advanced enough to see or understand more complex implementations.
 
 ## Conclusion (I'm confused)
+
+In the end, I am still confused on what 'perfect' error handling looks like in Go. Do big companies have a more advanced system? Does it even exist?
+
+Either way, I think sticking to simple custom errors is enough for now. 
+
+
+## Sources
+- https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
+- https://blog.dreamfactory.com/the-importance-of-loose-coupling-in-rest-api-design/
+- https://en.wikipedia.org/wiki/Coupling_(computer_programming)
+- https://www.youtube.com/watch?v=CxcxRgwWtAk
