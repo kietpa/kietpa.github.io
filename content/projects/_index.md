@@ -16,9 +16,11 @@ This section contains some of my projects and certificates. Other exercises/proj
 
 ## 🥝 Kiwish
 
-Kiwish is an e-commerce platform. **(WORK IN PROGRESS)**
+<img src="kiwish.png">
 
-<p class="text-center"><a href="https://github.com/arvisy/kiwish">Repo</a>  |  <a href="#🥝-kiwish">Slideshow</a></p>
+**Kiwish** is an e-commerce application with many features, made using *microservices* and gRPC. Notable features include payment gateway, shipment tracking, and e-mail notifications. The service was deployed on *Google Cloud Run*, while the databases are deployed on **Railway**. Created as the final project for the [Hacktiv8](https://hacktiv8.com/bootcamp-golang) bootcamp program with two of my friends.
+
+<p class="text-center"><a href="https://github.com/arvisy/kiwish">Repo</a>  |  <a href="https://ms-gateway-zx7zn2gpva-as.a.run.app/swagger/index.html">API Documentation</a></p>
 
 ## 🔎 True Sight
 
