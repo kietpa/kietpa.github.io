@@ -1,0 +1,37 @@
+#button-home {
+  position: relative;
+  background-color: #FF9505;
+  border-radius: 5px;
+  box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 154px;
+  height: 49px;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-family: monospace;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  line-height: 0px;
+  overflow: hidden;
+}
+
+#button-home::before {
+  content: "";
+  background-color: #FFB627;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+
+#button-home:hover::before {
+  width: 100%;
+}

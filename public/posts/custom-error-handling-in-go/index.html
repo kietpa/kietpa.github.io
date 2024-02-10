@@ -28,8 +28,10 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="../../css/main.bundle.min.c6cb7d76bc2f7ad3b49117792dc4c22ec9879b2a91fa3bc6abe4f5e2072998a2acd74d88c828d3aa4c09c262aec6740a233b56dc9c2f1e35bf9f400581150cc2.css"
-    integrity="sha512-xst9drwvetO0kRd5LcTCLsmHmyqR&#43;jvGq&#43;T14gcpmKKs102IyCjTqkwJwmKuxnQKIztW3JwvHjW/n0AFgRUMwg==" />
+  
+  
+  <link type="text/css" rel="stylesheet" href="../../css/main.bundle.min.1669ffaedd29e8589d7f9e6db7c3a4bbbc7b1d56a14b0a41edd9cbcff320de3fd979aee461d89f80a4a78fdcc5e5f0f75ea893c96a61d6b45065ccd247282db3.css"
+    integrity="sha512-Fmn/rt0p6Fidf55tt8Oku7x7HVahSwpB7dnLz/Mg3j/Zea7kYdifgKSnj9zF5fD3XqiTyWph1rRQZczSRygtsw==" />
   
   
   <script type="text/javascript" src="../../js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -102,7 +104,7 @@
     "keywords": ["Golang"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1799"
+    "wordCount": "1768"
   }]
   </script>
 
@@ -820,8 +822,7 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p><strong>Error handling</strong> is one of the things I&rsquo;ve struggled with the most while learning Go. The issue lies in <strong>where</strong> and <strong>how</strong> to handle these errors. It&rsquo;s mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it&rsquo;s hard to decide which one is the &lsquo;best practice&rsquo;. So I thought: <em>why not make a compilation of them?</em></p>
-<p>Now, of course I know that it differs from project to project and there is no &lsquo;best practice&rsquo;. I just made this for fun 😁.</p>
+          <p><strong>Error handling</strong> is one of the things I&rsquo;ve struggled with the most while learning Go. The issue lies in <strong>where</strong> and <strong>how</strong> to handle these errors. It&rsquo;s mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it&rsquo;s hard to decide which one is the &lsquo;best practice&rsquo;. So I thought: <em>why not compile them?</em></p>
 <p>Let&rsquo;s start with the basics.</p>
 <h2 class="relative group">Daisy-chaining 
     <div id="daisy-chaining" class="anchor"></div>
@@ -833,7 +834,7 @@
     </span>        
     
 </h2>
-<p>One of the first things I learned in Go, <strong>daisy-chaining</strong> errors is when errors are wrapped with the method or function that they are in. This is used to make <em>debugging</em> easier as errors show a clear <em>trace</em> when returned. I was really attracted to this idea due to my background of working with PLCs, and the whole concept of a daisy-chain was just neat.</p>
+<p>One of the first things I learned in Go, <strong>daisy-chaining</strong> errors is when errors are wrapped with the method or function that they are in. This is used to make <em>debugging</em> easier as errors show a clear <em>trace</em> when returned. I was really attracted to this idea due to my background of working with PLCs, and the whole concept of a daisy-chain was just neat. Adding context  using <code>fmt.Errorf</code> came from Donovan and Kernighan’s book <em>The Go Programming Language</em>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">thisFunction</span><span class="p">()</span> <span class="kt">error</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">err</span> <span class="o">:=</span> <span class="nf">someFunction</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;this function: %w&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
@@ -866,7 +867,7 @@
 <p>This is why I abandoned this way of error handling once I started building APIs. From seeing other people&rsquo;s code, it was common practice to <em>standardize</em> errors by creating custom ones and handling these errors should ideally be <em>centralized</em> in one layer. In the top layer, asserting the type of error would be difficult. Also, tracing errors could be done through <a href="https://github.com/sirupsen/logrus/issues/63#issuecomment-433746888"   target="_blank">
     logging package</a> using <a href="https://stackoverflow.com/questions/24809287/how-do-you-get-a-golang-program-to-print-the-line-number-of-the-error-it-just-ca"   target="_blank">
     flags</a> and whatnot.</p>
-<p>So, daisy-chaining seemed a bit obsolete. If I really wanted to make it work, a lot of effort would be needed for little in return. I thought to just follow the common practice and spend my time learning other things. Maybe I&rsquo;ll come back to this later in the future.</p>
+<p>So, daisy-chaining seemed a bit obsolete. Besides using it for basic error logging during development, I don&rsquo;t see it being used anywhere else. Maybe I&rsquo;ll come back to this later in the future.</p>
 <h2 class="relative group">Custom Errors 
     <div id="custom-errors" class="anchor"></div>
     

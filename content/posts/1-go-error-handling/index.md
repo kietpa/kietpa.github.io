@@ -8,15 +8,14 @@ tags: ["Golang"]
 showTableOfContents: true
 ---
 
-**Error handling** is one of the things I've struggled with the most while learning Go. The issue lies in **where** and **how** to handle these errors. It's mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it's hard to decide which one is the 'best practice'. So I thought: *why not make a compilation of them?* 
+**Error handling** is one of the things I've struggled with the most while learning Go. The issue lies in **where** and **how** to handle these errors. It's mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it's hard to decide which one is the 'best practice'. So I thought: *why not compile them?* 
 
-Now, of course I know that it differs from project to project and there is no 'best practice'. I just made this for fun 😁.
 
 Let's start with the basics.
 
 ## Daisy-chaining
 
-One of the first things I learned in Go, **daisy-chaining** errors is when errors are wrapped with the method or function that they are in. This is used to make *debugging* easier as errors show a clear *trace* when returned. I was really attracted to this idea due to my background of working with PLCs, and the whole concept of a daisy-chain was just neat.
+One of the first things I learned in Go, **daisy-chaining** errors is when errors are wrapped with the method or function that they are in. This is used to make *debugging* easier as errors show a clear *trace* when returned. I was really attracted to this idea due to my background of working with PLCs, and the whole concept of a daisy-chain was just neat. Adding context  using `fmt.Errorf` came from Donovan and Kernighan’s book *The Go Programming Language*.
 
 ```go
 func thisFunction() error {
@@ -53,9 +52,9 @@ This is extremely useful to detect errors that do not return the filename and li
 
 Daisy-chaining worked perfectly in that project because a CLI app didn't need to send these errors to higher layer to be handled if it wasn't needed. All you need to do was `fmt.Println(err)` at the same function and it appears in the terminal.
 
-This is why I abandoned this way of error handling once I started building APIs. From seeing other people's code, it was common practice to *standardize* errors by creating custom ones and handling these errors should ideally be *centralized* in one layer. In the top layer, asserting the type of error would be difficult. Also, tracing errors could be done through [logging package](https://github.com/sirupsen/logrus/issues/63#issuecomment-433746888) using [flags](https://stackoverflow.com/questions/24809287/how-do-you-get-a-golang-program-to-print-the-line-number-of-the-error-it-just-ca) and whatnot. 
+This is why I abandoned this way of error handling once I started building APIs. From seeing other people's code, it was common practice to *standardize* errors by creating custom ones and handling these errors should ideally be *centralized* in one layer. In the top layer, asserting the type of error would be difficult. Also, tracing errors could be done through [logging package](https://github.com/sirupsen/logrus/issues/63#issuecomment-433746888) using [flags](https://stackoverflow.com/questions/24809287/how-do-you-get-a-golang-program-to-print-the-line-number-of-the-error-it-just-ca) and whatnot.
 
-So, daisy-chaining seemed a bit obsolete. If I really wanted to make it work, a lot of effort would be needed for little in return. I thought to just follow the common practice and spend my time learning other things. Maybe I'll come back to this later in the future.
+So, daisy-chaining seemed a bit obsolete. Besides using it for basic error logging during development, I don't see it being used anywhere else. Maybe I'll come back to this later in the future.
 
 ## Custom Errors 
 
