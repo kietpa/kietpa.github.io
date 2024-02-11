@@ -18,7 +18,7 @@ This section contains some of my projects and certificates. Other exercises/proj
 
 <img src="kiwish.png">
 
-**Kiwish** is an e-commerce application with many features, made using *microservices* and gRPC. Notable features include payment gateway, shipment tracking, and e-mail notifications. The service was deployed on *Google Cloud Run*, while the databases were deployed on **Railway**. Created as the final project for the [Hacktiv8](https://hacktiv8.com/bootcamp-golang) bootcamp program with two of my friends.
+**Kiwish** is an e-commerce application with many features, made using *microservices* and gRPC. Notable features include payment gateway, shipment tracking, and e-mail notifications. The service was deployed on *Google Cloud Run*, while the databases were deployed on **Railway**. The project was made togheter with two of my friends.
 
 <p class="text-center"><a href="https://github.com/arvisy/kiwish">Repo</a>  |  <a href="https://ms-gateway-zx7zn2gpva-as.a.run.app/swagger/index.html">API Documentation</a></p>
 
@@ -46,7 +46,7 @@ Tech Stack:
 
 <img src="openAPI.png">
 
-**A hotel API** mini-project made in around 24 hours. Created with Golang, PostgreSQL, GORM, and Echo. Includes a **Xendit** payment gateway and email notifications. Made for the [Hacktiv8](https://hacktiv8.com/bootcamp-golang) bootcamp program.
+**A hotel API** mini-project made in around 3 days. Created with Golang, PostgreSQL, GORM, and Echo. Includes a **Xendit** payment gateway and email notifications.
 
 <p class="text-center"><a class="text-l" href="https://github.com/kiet-asmara/hotel-626">Repo</a></p>
 
