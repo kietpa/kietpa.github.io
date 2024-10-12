@@ -30,8 +30,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="../../css/main.bundle.min.1669ffaedd29e8589d7f9e6db7c3a4bbbc7b1d56a14b0a41edd9cbcff320de3fd979aee461d89f80a4a78fdcc5e5f0f75ea893c96a61d6b45065ccd247282db3.css"
-    integrity="sha512-Fmn/rt0p6Fidf55tt8Oku7x7HVahSwpB7dnLz/Mg3j/Zea7kYdifgKSnj9zF5fD3XqiTyWph1rRQZczSRygtsw==" />
+  <link type="text/css" rel="stylesheet" href="../../css/main.bundle.min.33e3adcfeea0a76f96adf96391993edbfed74c2e74885a12fe582dcd1592b5da0258bc30854d8c6eab609fa3aedc587985c1bd82c848e2bb96941225f8d7c8ab.css"
+    integrity="sha512-M&#43;Otz&#43;6gp2&#43;WrfljkZk&#43;2/7XTC50iFoS/lgtzRWStdoCWLwwhU2Mbqtgn6Ou3Fh5hcG9gshI4ruWlBIl&#43;NfIqw==" />
   
   
   <script type="text/javascript" src="../../js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -159,7 +159,8 @@
   
 </head>
 <body
-  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32
+  scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
       href="#main-content"><span
@@ -717,13 +718,14 @@
       class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
       <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
 
-         <details open class="toc-right mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
     class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     Table of Contents
   </summary>
   <div
-    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#daisy-chaining">Daisy-chaining</a></li>
@@ -764,8 +766,33 @@
   </div>
 </details>
 
- 
 <script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if (tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+  { { if .Site.Params.smartTOC } }
+
   (function () {
     var $toc = $('#TableOfContents');
     if ($toc.length > 0) {
@@ -777,33 +804,38 @@
         var id = "";
         h.each(function (i, e) {
           e = $(e);
-          if (e.offset().top - $(window).height()/3 <= currentScroll) {
-            id = e.attr('id');
+          if (e.offset().top - $(window).height() / 3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
           }
         });
-        var active = $toc.find('a.active');      
+        var active = $toc.find('a.active');
         if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
 
         active.each(function (i, e) {
-          
-            $(e).removeClass('active');
-          
+          { { if .Site.Params.smartTOCHideUnfocusedChildren } }
+          $(e).removeClass('active').siblings('ul').hide();
+          { { else } }
+          $(e).removeClass('active');
+          { { end } }
         });
         $toc.find('a[href="#' + id + '"]').addClass('active')
         $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
-          $(e).children('a').parents('ul').show();          
+          $(e).children('a').parents('ul').show();
         });
       }
 
       $window.on('scroll', onScroll);
       $(document).ready(function () {
-        
+        { { if .Site.Params.smartTOCHideUnfocusedChildren } }
+        $toc.find('a').parent('li').find('ul').hide();
+        { { end } }
         onScroll();
       });
     }
   })();
-</script>
-   </div>
+  { { end } }
+
+</script>   </div>
       </div>
       
 
@@ -1416,5 +1448,6 @@
 
   </div>
 </body>
+
 
 </html>
