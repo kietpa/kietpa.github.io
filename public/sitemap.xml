@@ -3,6 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://kiet.blog/posts/test-jdbctemplate-dao-testcontainers/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kiet.blog/tags/java/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kiet.blog/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kiet.blog/tags/</loc>
+    <lastmod>2024-10-11T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kiet.blog/tags/golang/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -10,18 +34,6 @@
   </url>
   <url>
     <loc>https://kiet.blog/posts/custom-error-handling-in-go/</loc>
-    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kiet.blog/</loc>
-    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kiet.blog/tags/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

@@ -2,4 +2,4 @@
 title: Golang
 ---
 
-Learning Go one step at a time.
+We're trying to get them to Pokemon Go to the polls.

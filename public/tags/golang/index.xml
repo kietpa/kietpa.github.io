@@ -14,7 +14,7 @@
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kiet.blog/posts/custom-error-handling-in-go/</guid>
-      <description>Error handling is one of the things I&amp;rsquo;ve struggled with the most while learning Go. The issue lies in where and how to handle these errors. It&amp;rsquo;s mostly agreed upon that it should be done separately from the main application, but there are many ways to do this and it&amp;rsquo;s hard to decide which one is the &amp;lsquo;best practice&amp;rsquo;.</description>
+      <description>Error handling is one of the things I&amp;rsquo;ve struggled with the most while learning Go. The issue lies in where and how to handle these errors.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kiet.blog/posts/custom-error-handling-in-go/featured.jpg" />
     </item>
     
