@@ -7,14 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Kiet Asmara</copyright>
-    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kiet.blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kiet.blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://kiet.blog/tags/java/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiet.blog/tags/java/</guid>
+      <description>Learning Java in Java as a Javanese.</description>
+      
+    </item>
+    
     <item>
       <title>Golang</title>
       <link>https://kiet.blog/tags/golang/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://kiet.blog/tags/golang/</guid>
-      <description>Learning Go one step at a time.</description>
+      <description>We&amp;rsquo;re trying to get them to Pokemon Go to the polls.</description>
       
     </item>
     
