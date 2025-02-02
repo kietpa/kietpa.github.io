@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on kietpa</title>
-    <link>https://kiet.blog/projects/</link>
-    <description>Recent content in Projects on kietpa</description>
+    <title>Projects on A software engineering blog and portofolio</title>
+    <link>https://kietpa.github.io/projects/</link>
+    <description>Recent content in Projects on A software engineering blog and portofolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 Kiet Asmara</copyright>
-    <atom:link href="https://kiet.blog/projects/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Kiet Asmara</copyright>
+    <atom:link href="https://kietpa.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

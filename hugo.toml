@@ -1,4 +1,4 @@
-baseURL = 'https://kiet.blog/'
+baseURL = 'https://kietpa.github.io/'
 relativeURLs = true
 languageCode = 'en-us'
 title = 'My New Hugo Site'

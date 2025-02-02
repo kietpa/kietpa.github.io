@@ -3,69 +3,69 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://kiet.blog/posts/test-jdbctemplate-dao-testcontainers/</loc>
+    <loc>https://kietpa.github.io/posts/test-jdbctemplate-dao-testcontainers/</loc>
     <lastmod>2024-10-11T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/tags/java/</loc>
+    <loc>https://kietpa.github.io/tags/java/</loc>
     <lastmod>2024-10-11T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/</loc>
+    <loc>https://kietpa.github.io/</loc>
     <lastmod>2024-10-11T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/tags/</loc>
+    <loc>https://kietpa.github.io/tags/</loc>
     <lastmod>2024-10-11T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/tags/golang/</loc>
+    <loc>https://kietpa.github.io/tags/golang/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/posts/custom-error-handling-in-go/</loc>
+    <loc>https://kietpa.github.io/posts/custom-error-handling-in-go/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/posts/</loc>
+    <loc>https://kietpa.github.io/posts/</loc>
     <lastmod>2022-06-13T20:55:37+01:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/about/</loc>
+    <loc>https://kietpa.github.io/about/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/authors/</loc>
+    <loc>https://kietpa.github.io/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/categories/</loc>
+    <loc>https://kietpa.github.io/categories/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/projects/</loc>
+    <loc>https://kietpa.github.io/projects/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kiet.blog/series/</loc>
+    <loc>https://kietpa.github.io/series/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

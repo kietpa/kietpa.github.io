@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on kietpa</title>
-    <link>https://kiet.blog/posts/</link>
-    <description>Recent content in Blog on kietpa</description>
+    <title>Blog on A software engineering blog and portofolio</title>
+    <link>https://kietpa.github.io/posts/</link>
+    <description>Recent content in Blog on A software engineering blog and portofolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 Kiet Asmara</copyright>
-    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="https://kiet.blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Kiet Asmara</copyright>
+    <lastBuildDate>Mon, 13 Jun 2022 20:55:37 +0100</lastBuildDate><atom:link href="https://kietpa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use Testcontainers for DAO Unit Tests (JdbcTemplate)</title>
-      <link>https://kiet.blog/posts/test-jdbctemplate-dao-testcontainers/</link>
+      <link>https://kietpa.github.io/posts/test-jdbctemplate-dao-testcontainers/</link>
       <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://kiet.blog/posts/test-jdbctemplate-dao-testcontainers/</guid>
+      <guid>https://kietpa.github.io/posts/test-jdbctemplate-dao-testcontainers/</guid>
       <description>This article will show how to test a Data Access Object (DAO) in Spring Boot using Testcontainers. Testcontainers is used in tests to create a temporary docker container that contains a real, temporary database instead of mocking it.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kiet.blog/posts/test-jdbctemplate-dao-testcontainers/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kietpa.github.io/posts/test-jdbctemplate-dao-testcontainers/featured.png" />
     </item>
     
     <item>
       <title>How do you even handle errors in Go?</title>
-      <link>https://kiet.blog/posts/custom-error-handling-in-go/</link>
+      <link>https://kietpa.github.io/posts/custom-error-handling-in-go/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://kiet.blog/posts/custom-error-handling-in-go/</guid>
+      <guid>https://kietpa.github.io/posts/custom-error-handling-in-go/</guid>
       <description>Error handling is one of the things I&amp;rsquo;ve struggled with the most while learning Go. The issue lies in where and how to handle these errors.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kiet.blog/posts/custom-error-handling-in-go/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://kietpa.github.io/posts/custom-error-handling-in-go/featured.jpg" />
     </item>
     
   </channel>

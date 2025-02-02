@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "kietpa"
+title = "A software engineering blog and portofolio"
 
 [params]
   displayName = "EN"

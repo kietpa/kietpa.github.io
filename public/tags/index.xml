@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on kietpa</title>
-    <link>https://kiet.blog/tags/</link>
-    <description>Recent content in Tags on kietpa</description>
+    <title>Tags on A software engineering blog and portofolio</title>
+    <link>https://kietpa.github.io/tags/</link>
+    <description>Recent content in Tags on A software engineering blog and portofolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 Kiet Asmara</copyright>
-    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kiet.blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Kiet Asmara</copyright>
+    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kietpa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java</title>
-      <link>https://kiet.blog/tags/java/</link>
+      <link>https://kietpa.github.io/tags/java/</link>
       <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://kiet.blog/tags/java/</guid>
+      <guid>https://kietpa.github.io/tags/java/</guid>
       <description>Learning Java in Java as a Javanese.</description>
       
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://kiet.blog/tags/golang/</link>
+      <link>https://kietpa.github.io/tags/golang/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://kiet.blog/tags/golang/</guid>
+      <guid>https://kietpa.github.io/tags/golang/</guid>
       <description>We&amp;rsquo;re trying to get them to Pokemon Go to the polls.</description>
       
     </item>
