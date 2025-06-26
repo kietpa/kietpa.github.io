@@ -50,6 +50,16 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kietpa.github.io/projects/kiwish/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kietpa.github.io/projects/letspay/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kietpa.github.io/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

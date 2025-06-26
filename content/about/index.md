@@ -18,4 +18,4 @@ Personally, working in EE; dealing with PLCs, Motors, electrical diagrams, and o
 
 Maybe it's the fact that software documentation is more readily available than in EE. I remember spending a whole week reading the manual book of an Omron synchronous motor, and still not understanding a single thing. Whereas with the GCP or Golang docs, it would take much less time to understand since I can look up what other people have said using Google.
 
-That's why I want to become a software engineer. Hopefully a good one 😁.
+That's why I want to become a software engineer. Hopefully a good one 😁

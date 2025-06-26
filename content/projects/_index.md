@@ -14,13 +14,21 @@ showTitle: false
 ---
 This section contains some of my projects and certificates. Other exercises/projects are located in my [github](https://github.com/kietpa).
 
+## 🏧 Letspay (WIP)
+
+<img src="letspay-placeholder.png">
+
+**Letspay** is a payment aggregator app that will be integrated with multiple providers such as Xendit & Midtrans. It is made for the purpose of learning technologies such as Grafana logging, Integration with payment providers, microservices, etc. Currently still in progress.
+
+<p class="text-center"><a href="https://github.com/kietpa/letspay">Repo</a>  |  <a href="/projects/letspay">API Documentation</a></p>
+
 ## 🥝 Kiwish
 
 <img src="kiwish.png">
 
-**Kiwish** is an e-commerce application with many features, made using *microservices* and gRPC. Notable features include payment gateway, shipment tracking, and e-mail notifications. The service was deployed on *Google Cloud Run*, while the databases were deployed on **Railway**. The project was made together with two of my friends.
+**Kiwish** is an e-commerce application with many features, made using *microservices* and gRPC. Notable features include payment gateway, shipment tracking, and e-mail notifications. The service was deployed on *Google Cloud Run*, while the databases were deployed on *Railway*. The project was made together with two of my friends.
 
-<p class="text-center"><a href="https://github.com/arvisy/kiwish">Repo</a>  |  <a href="https://ms-gateway-zx7zn2gpva-as.a.run.app/swagger/index.html">API Documentation</a></p>
+<p class="text-center"><a href="https://github.com/arvisy/kiwish">Repo</a>  |  <a href="/projects/kiwish">API Documentation</a></p>
 
 ## 🔎 True Sight
 
@@ -40,7 +48,7 @@ Tech Stack:
 <img src="clothera.gif">
 
 **Clothera** is a simple CLI app for a Clothing store. Made purely with **Golang** and MySQL. Created with two of my friends.
-<p class="text-center"><a href="https://github.com/kiet-asmara/clothera">Repo</a>  |  <a href="https://docs.google.com/presentation/d/1ZMuYfju0HzGqvV9Rl5bnrk5mpsCpM33q8dw0j0w-vn4/edit?usp=sharing">Slideshow</a></p>
+<p class="text-center"><a href="https://github.com/kietpa/clothera">Repo</a>  |  <a href="https://docs.google.com/presentation/d/1ZMuYfju0HzGqvV9Rl5bnrk5mpsCpM33q8dw0j0w-vn4/edit?usp=sharing">Slideshow</a></p>
 
 ## 🏬 Hotel 626
 
@@ -48,7 +56,7 @@ Tech Stack:
 
 **A hotel API** mini-project made in around 3 days. Created with Golang, PostgreSQL, GORM, and Echo. Includes a **Xendit** payment gateway and email notifications.
 
-<p class="text-center"><a class="text-l" href="https://github.com/kiet-asmara/hotel-626">Repo</a></p>
+<p class="text-center"><a class="text-l" href="https://github.com/kietpa/hotel-626">Repo</a></p>
 
 ## ⚙️ DC Motor Speed Control with EKF & PI-PSO
 
@@ -56,7 +64,7 @@ Tech Stack:
 
 A program to estimate and control the speed of a non-linear *DC Motor* without using speed sensors, only electrical sensors. The estimation was done using the ***Extended Kalman Filter*** (EKF) while the motor was controlled by a PI controller, tuned using the ***Particle Swarm Optimization*** (PSO) algorithm. The program was made using MATLAB scripts and Simulink. Created as my **final project** in university.
 
-<p class="text-center"><a href="hhttps://github.com/kiet-asmara/DCMotor_EKF_PI-PSO">Repo</a>  |  <a href="https://docs.google.com/presentation/d/1iS_gpW14bp4P91pkkgexp0vfNEUtq4ft/edit?usp=sharing&ouid=117927957500009183925&rtpof=true&sd=true">Slideshow</a>  |  <a href="https://drive.google.com/file/d/1eVb1LQNka8v2IrZaz02AhzmxgsRHcZHe/view?usp=sharing">Article</a></p>
+<p class="text-center"><a href="https://github.com/kietpa/DCMotor_EKF_PI-PSO">Repo</a>  |  <a href="https://docs.google.com/presentation/d/1iS_gpW14bp4P91pkkgexp0vfNEUtq4ft/edit?usp=sharing&ouid=117927957500009183925&rtpof=true&sd=true">Slideshow</a>  |  <a href="https://drive.google.com/file/d/1eVb1LQNka8v2IrZaz02AhzmxgsRHcZHe/view?usp=sharing">Article</a></p>
 
 ## 📜 Certificates
 
